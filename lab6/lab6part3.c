@@ -1,8 +1,8 @@
 #include <stdio.h>
 int TEST_NUM[ ] = {0x0000e000, 0x3fabedef, 0x00000001, 0x00000002, 0x75a5a5a5,
 0x01ffC000, 0x03ffC000, 0x55555555, 0x77777777, 0x08888888,0x00000000};
-volatile char *HEX1 = 0xFF200020;
-volatile char *HEX2 = 0xFF200030;
+volatile int *HEX1 = (int *)0xFF200020;
+volatile int *HEX2 = (int *)0xFF200030;
 int main()
 {
     int index,i,ones=0,zeros=0,alternating=0,length;
